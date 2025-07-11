@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. Sujit Singh - Professional Portfolio</title>
+    <title>Dr. Sujit Singh - Academic Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <style>
@@ -13,9 +13,12 @@
             --accent: #e74c3c;
             --light: #f8f9fa;
             --dark: #212529;
+            --light-bg: #f0f4f8;
+            --medium-bg: #e3eaf3;
             --transition: all 0.3s ease;
             --shadow: 0 5px 15px rgba(0,0,0,0.1);
             --radius: 10px;
+            --card-bg: #ffffff;
         }
         
         * {
@@ -26,9 +29,9 @@
         
         body {
             font-family: 'Poppins', sans-serif;
-            line-height: 1.6;
+            line-height: 1.8;
             color: var(--dark);
-            background-color: #f0f4f8;
+            background-color: var(--light-bg);
             overflow-x: hidden;
         }
         
@@ -176,7 +179,7 @@
         /* Section Styles */
         section {
             padding: 100px 0;
-            background: white;
+            background: var(--light-bg);
         }
         
         .section-header {
@@ -218,7 +221,7 @@
         }
         
         .card {
-            background: white;
+            background: var(--card-bg);
             border-radius: var(--radius);
             overflow: hidden;
             box-shadow: var(--shadow);
@@ -277,7 +280,7 @@
         
         .timeline-content {
             padding: 20px;
-            background: white;
+            background: var(--card-bg);
             border-radius: var(--radius);
             box-shadow: var(--shadow);
             position: relative;
@@ -308,57 +311,63 @@
             margin-bottom: 10px;
         }
         
-        /* Skills */
-        .skill-bars {
-            max-width: 800px;
-            margin: 0 auto;
+        /* Content Sections */
+        .content-section {
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: var(--shadow);
         }
         
-        .skill-bar {
+        .content-section h3 {
+            color: var(--secondary);
+            border-bottom: 2px solid var(--medium-bg);
+            padding-bottom: 15px;
             margin-bottom: 25px;
         }
         
-        .skill-info {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 8px;
+        .content-item {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px dashed var(--medium-bg);
         }
         
-        .skill-progress {
-            height: 12px;
-            background: #e0e0e0;
-            border-radius: 6px;
-            overflow: hidden;
+        .content-item:last-child {
+            border-bottom: none;
         }
         
-        .skill-progress span {
-            display: block;
-            height: 100%;
-            background: var(--primary);
-            border-radius: 6px;
-            position: relative;
-            width: 0;
-            transition: width 1.5s ease;
-        }
-        
-        /* Publications */
-        .publication-list {
-            list-style: none;
+        .content-item h4 {
+            color: var(--primary);
+            margin-bottom: 10px;
         }
         
         .publication-item {
-            background: white;
-            border-left: 4px solid var(--primary);
-            padding: 20px;
             margin-bottom: 20px;
+            padding: 20px;
+            background: var(--light);
+            border-left: 4px solid var(--primary);
             border-radius: 0 var(--radius) var(--radius) 0;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
         }
         
         .publication-item:hover {
-            transform: translateX(10px);
             border-left-color: var(--accent);
+            background: #fff;
+        }
+        
+        .publication-item h4 {
+            color: var(--secondary);
+        }
+        
+        .tag {
+            display: inline-block;
+            background: var(--medium-bg);
+            color: var(--primary);
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin-right: 8px;
+            margin-top: 8px;
         }
         
         /* Contact */
@@ -406,6 +415,7 @@
             font-family: inherit;
             font-size: 1rem;
             transition: var(--transition);
+            background: var(--light);
         }
         
         .contact-form input:focus,
@@ -413,6 +423,7 @@
             border-color: var(--primary);
             outline: none;
             box-shadow: 0 0 0 3px rgba(26, 58, 95, 0.1);
+            background: white;
         }
         
         /* Footer */
@@ -609,22 +620,43 @@
                 <h2>About Me</h2>
                 <p>An accomplished academician with over 23 years of experience in teaching, research, and academic administration</p>
             </div>
-            <div class="card">
-                <div class="card-body">
-                    <div class="about-content">
-                        <p>Dr. Sujit Singh holds a Bachelor's in Production Engineering and Management from NIT Jamshedpur, a Master's in Industrial Engineering from IIT Delhi, and a Ph.D. in Manufacturing Management/Operations Management from the University of Malaya.</p>
-                        <p>With expertise in Operations Management, Sustainable Manufacturing, Quality Engineering, and Optimization, Dr. Singh has published extensively in national and international journals and serves as a reviewer for high-impact publications.</p>
-                        <div class="about-highlights">
-                            <div class="highlight-item">
-                                <h4>Specialization</h4>
-                                <p>Operations Management/Supply Chain Management</p>
-                            </div>
-                            <div class="highlight-item">
-                                <h4>Total Experience</h4>
-                                <p>23+ years in Teaching, Research & Academic Administration</p>
-                            </div>
-                        </div>
-                    </div>
+            <div class="content-section">
+                <h3>Professional Summary</h3>
+                <p>Dr. Sujit Singh is an accomplished academician with over 23 years of experience in teaching, research, and academic administration. He holds a Bachelor's in Production Engineering and Management from NIT Jamshedpur, a Master's in Industrial Engineering from IIT Delhi, and a Ph.D. in Manufacturing Management/Operations Management from the University of Malaya, a globally ranked institution.</p>
+                
+                <p>Dr. Singh has been actively involved in prestigious research centers such as CRDT at IIT Delhi and CPDM at the University of Malaya and was awarded an ICSSR research project by the Indian government.</p>
+                
+                <p>Throughout his career, he has published extensively in national and international journals and serves as a reviewer for high-impact publications like the International Journal of Production Research and the Journal of Intelligent Manufacturing. His teaching career spans several prominent institutions, both in India and abroad, including a role as Associate Professor at the Ethiopian Technical University. Dr. Singh has also held leadership positions, including Program Coordinator and Head of the Mechanical Engineering Department.</p>
+                
+                <p>He is an Institution of Industrial Engineers and ISTE member, with expertise in Operations Management, Sustainable Manufacturing, Quality Engineering, and Optimization. He is an Associate Professor at Woxsen University's School of Management in Hyderabad, India.</p>
+                
+                <div class="content-item">
+                    <h4>Specialization</h4>
+                    <p>Operations Management/ Supply Chain Management</p>
+                </div>
+                
+                <div class="content-item">
+                    <h4>Total Experience</h4>
+                    <p>23+ years (in Teaching and Research & Academic Administration)</p>
+                </div>
+                
+                <div class="content-item">
+                    <h4>Contact Information</h4>
+                    <p><strong>Address:</strong> A-6, Navshakti Apartment, Ghitorni, New Delhi-110030</p>
+                    <p><strong>Email:</strong> singhsujit@hotmail.com; sujit.singh@woxsen.edu.in</p>
+                    <p><strong>Mobile:</strong> +91-7065699586</p>
+                </div>
+                
+                <div class="content-item">
+                    <h4>Research Profiles</h4>
+                    <p>
+                        <a href="https://scholar.google.co.in/citations?user=74DKkmoAAAAJ&hl=en" target="_blank">Google Scholar</a> | 
+                        <a href="https://www.researchgate.net/profile/Sujit-Singh-8" target="_blank">ResearchGate</a> | 
+                        <a href="https://orcid.org/0000-0002-3643-5183" target="_blank">ORCID</a> | 
+                        <a href="https://publons.com/researcher/2576206/sujit-dr-singh/" target="_blank">Publon</a> | 
+                        <a href="https://researchid.co/singhsujit" target="_blank">ResearchID</a> | 
+                        <a href="https://www.linkedin.com/in/dr-sujit-singh-5bb71623/" target="_blank">LinkedIn</a>
+                    </p>
                 </div>
             </div>
         </div>
@@ -643,8 +675,8 @@
                         <div class="timeline-date">2016</div>
                         <h3>Ph.D. Manufacturing Management</h3>
                         <p>University of Malaya, Kuala Lumpur, Malaysia</p>
-                        <p>Topic: Development of sustainable manufacturing decision-making models for small and medium enterprises</p>
-                        <p>Supervisors: Dr. Ezutah Udoney Olugu & Dr. Siti Nurmaya Musa</p>
+                        <p><strong>Topic:</strong> Development of sustainable manufacturing decision-making models for small and medium enterprises</p>
+                        <p><strong>Supervisors:</strong> Dr. Ezutah Udoney Olugu & Dr. Siti Nurmaya Musa</p>
                     </div>
                 </div>
                 <div class="timeline-item">
@@ -652,9 +684,9 @@
                         <div class="timeline-date">2000</div>
                         <h3>Master of Technology in Industrial Engineering</h3>
                         <p>Indian Institute of Technology, Delhi, India</p>
-                        <p>CGPA: 8.062</p>
-                        <p>Thesis: Critical review of ISO 9000 Standards</p>
-                        <p>Supervisor: Dr. S.G. Deshmukh</p>
+                        <p><strong>CGPA:</strong> 8.062</p>
+                        <p><strong>Thesis:</strong> Critical review of ISO 9000 Standards</p>
+                        <p><strong>Supervisor:</strong> Dr. S.G. Deshmukh</p>
                     </div>
                 </div>
                 <div class="timeline-item">
@@ -681,12 +713,12 @@
                     <div class="timeline-content">
                         <div class="timeline-date">2023 - Present</div>
                         <h3>Woxsen University, Hyderabad</h3>
-                        <p>Associate Professor</p>
+                        <p><strong>Position:</strong> Associate Professor</p>
                         <ul>
-                            <li>Internal Academic Audit Member for SOB</li>
-                            <li>Research Coordinator for SOB</li>
-                            <li>Examination Cell Coordinator for SOB</li>
-                            <li>Director for Think Tank for Supply Chain and Logistics Management</li>
+                            <li>Appointed as Internal Academic Audit Member for SOB</li>
+                            <li>Appointed as Research Coordinator for SOB</li>
+                            <li>Appointed as Examination Cell Coordinator for SOB</li>
+                            <li>Appointed as Director for Think Tank for Supply Chain and Logistics Management</li>
                             <li>Supervising three PhD students</li>
                         </ul>
                     </div>
@@ -695,7 +727,7 @@
                     <div class="timeline-content">
                         <div class="timeline-date">2018 - 2023</div>
                         <h3>Ethiopian Technical University, Addis Ababa</h3>
-                        <p>Associate Professor (Manufacturing Technology and Management)</p>
+                        <p><strong>Position:</strong> Associate Professor (Manufacturing Technology and Management)</p>
                         <ul>
                             <li>SPOC for Center of Excellence (Die Manufacturing)</li>
                             <li>Member of Moderation Committee for PG</li>
@@ -708,12 +740,69 @@
                     <div class="timeline-content">
                         <div class="timeline-date">2015 - 2018</div>
                         <h3>MVN University, Palwal, India</h3>
-                        <p>Professor and Head of Department (Mechanical Engineering)</p>
+                        <p><strong>Position:</strong> Professor and Head of Department (Mechanical Engineering)</p>
                         <ul>
                             <li>Director (IQAC), MVN University</li>
-                            <li>Led the university for various accreditations</li>
+                            <li>Led the university for various accreditations (NBA, BCI, etc.)</li>
                             <li>Centre Superintendent for Examinations</li>
                             <li>Member of the Academic Council</li>
+                            <li>Chairman, Board of Studies for Mechanical Engineering Curriculum Development</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">2013 - 2015</div>
+                        <h3>Centre for Product Development and Management, University of Malaya, Kuala Lumpur, Malaysia</h3>
+                        <p><strong>Position:</strong> Research Assistant</p>
+                        <ul>
+                            <li>Worked on two University of Malaya Research Grant Projects</li>
+                            <li>Worked on one High Impact Project by the Ministry of Education, Malaysia</li>
+                            <li>Developed an Expert System for Sustainability Assessment of Manufacturing SMEs</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">2011 - 2012</div>
+                        <h3>Jaypee University of Engineering & Technology, Guna, Madhya Pradesh, India</h3>
+                        <p><strong>Position:</strong> Assistant Professor (SG)</p>
+                        <ul>
+                            <li>Coordinator for PG program at the Department Level</li>
+                            <li>Supervised three Master's Thesis</li>
+                            <li>Established Rapid Prototyping and 3-D printing Laboratory</li>
+                            <li>Member of the Disciplinary Committee at the University Level</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">2005 - 2011</div>
+                        <h3>Ansal Institute of Technology, Gurgaon, India</h3>
+                        <p><strong>Position:</strong> Assistant Professor</p>
+                        <ul>
+                            <li>Program Coordinator for the B.Tech. Program</li>
+                            <li>Founder faculty of Bachelor of Technology Program</li>
+                            <li>Head, Research and Development Unit</li>
+                            <li>Convenor of two International Conferences on "Nano-Technology"</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">2004 - 2005</div>
+                        <h3>Institute of Technology and Management, Gurgaon, India</h3>
+                        <p><strong>Position:</strong> Senior Lecturer</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">2000 - 2004</div>
+                        <h3>JSS Academy of Technical Education, Noida, Uttar Pradesh, India</h3>
+                        <p><strong>Position:</strong> Lecturer</p>
+                        <ul>
+                            <li>Workshop In charge</li>
+                            <li>Head, Manufacturing Technology Department</li>
                         </ul>
                     </div>
                 </div>
@@ -728,45 +817,89 @@
                 <h2>Research & Projects</h2>
                 <p>Significant research contributions and projects</p>
             </div>
-            <div class="card-grid">
-                <div class="card">
-                    <div class="card-header">
-                        <h3>Research Projects</h3>
-                    </div>
-                    <div class="card-body">
-                        <ul>
-                            <li>ICSSR Empirical Research Project on Impact and Reach Evaluation of Multi-Modal Connectivity Study in Telangana and Andhra Pradesh (2023-ongoing)</li>
-                            <li>Design and Analysis of Inter-sectoral Green Supply Chain Performance Measurement Expert System at CPDM, University of Malaya (2013-2015)</li>
-                            <li>Review of ISO 9000-based Quality Management System in Small Scale Industries at TQMI Pvt. Ltd., Delhi (1999)</li>
-                        </ul>
-                    </div>
+            
+            <div class="content-section">
+                <h3>Research Projects</h3>
+                <div class="content-item">
+                    <h4>ICSSR Empirical Research Project (2023 - ongoing)</h4>
+                    <p>Impact and Reach Evaluation of Multi-Modal Connectivity Study in Telangana and Andhra Pradesh</p>
                 </div>
-                <div class="card">
-                    <div class="card-header">
-                        <h3>Training & Consultancy</h3>
-                    </div>
-                    <div class="card-body">
-                        <ul>
-                            <li>Consultancy to Small-Scale Industries for ISO 9000 Certification (1999)</li>
-                            <li>14 on-site training sessions for NHPC executives on Productivity Improvement, 5S & KAIZEN, and Managing Quality (2007-2008)</li>
-                            <li>Training on Statistical Quality Control and Design of Experiments for Jaypee Cement executives (2011)</li>
-                        </ul>
-                    </div>
+                <div class="content-item">
+                    <h4>Design and Analysis of Inter-sectoral Green Supply Chain Performance Measurement Expert System (2013-2015)</h4>
+                    <p>At CPDM, University of Malaya</p>
                 </div>
-                <div class="card">
-                    <div class="card-header">
-                        <h3>Courses Taught</h3>
+                <div class="content-item">
+                    <h4>Review of ISO 9000-based Quality Management System in Small Scale Industries (1999)</h4>
+                    <p>At TQMI Pvt. Ltd., Delhi</p>
+                </div>
+                <div class="content-item">
+                    <h4>Ergonomically design of the tools for the handloom in carpet industries (2000)</h4>
+                    <p>Ministry of Textile, Govt. of India at CRDT, IIT Delhi</p>
+                </div>
+                <div class="content-item">
+                    <h4>Productivity Improvement of CNC machines (1997)</h4>
+                    <p>Tata Motors, Jamshedpur (Internship Project)</p>
+                </div>
+                <div class="content-item">
+                    <h4>Study of Microstructure in Submerged Arc Welding Process (1997-1998)</h4>
+                    <p>NIT Jamshedpur (Bachelors Major Project)</p>
+                </div>
+            </div>
+            
+            <div class="content-section">
+                <h3>Training and Consultancy Projects</h3>
+                <div class="content-item">
+                    <h4>ISO 9000 Certification Consultancy (1999)</h4>
+                    <p>Consultancy to Small-Scale Industries by working with TQMI Pvt.Ltd, Delhi</p>
+                </div>
+                <div class="content-item">
+                    <h4>Productivity Training for NHPC (2007-2008)</h4>
+                    <p>Conducted 14 on-site training sessions for NHPC executives on Productivity Improvement, 5S & KAIZEN, and Managing Quality</p>
+                </div>
+                <div class="content-item">
+                    <h4>Quality Training for Jaypee Cement (2011)</h4>
+                    <p>Conducted two on-site training sessions on Statistical Quality Control and Design of Experiments at Rewa, Madhya Pradesh</p>
+                </div>
+                <div class="content-item">
+                    <h4>Quality Training for Shree Cement (2012)</h4>
+                    <p>Conducted on-site training session on Quality Assurance and SQC at Byawar, Rajasthan</p>
+                </div>
+            </div>
+            
+            <div class="content-section">
+                <h3>Courses Taught</h3>
+                <div class="card-grid">
+                    <div class="card">
+                        <div class="card-body">
+                            <ul>
+                                <li>Operations Research</li>
+                                <li>Supply Chain Management and Analytics</li>
+                                <li>Enterprises Resource Planning</li>
+                                <li>Operations Strategy</li>
+                                <li>Project Management</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="card-body">
-                        <ul>
-                            <li>Operations Research</li>
-                            <li>Supply Chain Management and Analytics</li>
-                            <li>Enterprises Resource Planning</li>
-                            <li>Operations Strategy</li>
-                            <li>Project Management</li>
-                            <li>Quantitative Methods for Business Research</li>
-                            <li>Six Sigma and Quality Management</li>
-                        </ul>
+                    <div class="card">
+                        <div class="card-body">
+                            <ul>
+                                <li>Human Factor Engineering</li>
+                                <li>Quantitative Methods for Business Research</li>
+                                <li>Business Research Methodology</li>
+                                <li>Industrial Engineering</li>
+                                <li>Production Planning and Control</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <ul>
+                                <li>Pricing and Revenue Management</li>
+                                <li>Six Sigma and Quality Management</li>
+                                <li>Business Analytics</li>
+                                <li>And many more</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -780,28 +913,94 @@
                 <h2>Publications</h2>
                 <p>Selected research publications in prestigious journals</p>
             </div>
-            <ul class="publication-list">
-                <li class="publication-item">
-                    <h3>Strategy selection for sustainable manufacturing in SMEs by integrated AHP and VIKOR based on interval-valued fuzzy numbers</h3>
+            
+            <div class="content-section">
+                <h3>Journal Publications</h3>
+                <div class="publication-item">
+                    <h4>Singh, S., Mittal, R., & Sinha, P. (2025). Modelling of critical success factors for procurement of AI systems: a study in the purview of the Indian public sector.</h4>
+                    <p>Journal of Public Procurement (WoS & Scopus Indexed)</p>
+                </div>
+                <div class="publication-item">
+                    <h4>S Singh, EU Olugu, S Nurmaya, AB Mahat, KY Wong. (2015), Strategy selection for sustainable manufacturing in SMEs by integrated AHP and VIKOR based on interval-valued fuzzy numbers</h4>
                     <p>International Journal of Advanced Manufacturing Technology (WoS & Scopus-Indexed)</p>
-                    <p>Singh, S., Olugu, E.U., Nurmaya, S., Mahat, A.B., Wong, K.Y. (2015)</p>
-                </li>
-                <li class="publication-item">
-                    <h3>Development of sustainable manufacturing performance evaluation expert system for small and medium enterprises</h3>
-                    <p>Procedia CIRP (WoS & Scopus-Indexed)</p>
-                    <p>Singh, S., Olugu, E.U., Nurmaya, S. (2016)</p>
-                </li>
-                <li class="publication-item">
-                    <h3>Fuzzy-based sustainability evaluation method for manufacturing SMEs using balanced scorecard framework</h3>
-                    <p>Journal of Intelligent Manufacturing (WoS & Scopus-Indexed)</p>
-                    <p>Singh, S., Olugu, E.U., Musa, S.N., Mahat, A.B. (2015)</p>
-                </li>
-                <li class="publication-item">
-                    <h3>Fuzzy-based sustainable manufacturing assessment model for SMEs</h3>
-                    <p>Clean Technologies and Environmental Policy (WoS & Scopus-Indexed)</p>
-                    <p>Singh, S., Olugu, E.U., Fallahpour, A. (2014)</p>
-                </li>
-            </ul>
+                </div>
+                <div class="publication-item">
+                    <h4>S Singh, EU Olugu, S Nurmaya. (2016). Development of sustainable manufacturing performance evaluation expert system for small and medium enterprises.</h4>
+                    <p>Procedia CIRP, 40, 609-614. (WoS & Scopus- Indexed)</p>
+                </div>
+                <div class="publication-item">
+                    <h4>S Singh, EU Olugu, SN Musa, AB Mahat, (2015), Fuzzy-based sustainability evaluation method for manufacturing SMEs using balanced scorecard framework.</h4>
+                    <p>Journal of Intelligent Manufacturing, 1-18. doi: 10.1007/s10845-015-1081-1. (WoS & Scopus-Indexed)</p>
+                </div>
+                <div class="publication-item">
+                    <h4>S Singh, EU Olugu, A Fallahpour, (2014), Fuzzy-based sustainable manufacturing assessment model for SMEs.</h4>
+                    <p>Clean Technologies and Environmental Policy, 16(5), 847-860. (WoS & Scopus-Indexed)</p>
+                </div>
+                <div class="publication-item">
+                    <h4>M.Niqab, S.Singh, S. Shaikh (2020), Fuzzy Based Principal's Leadership Skills Assessment Model for Secondary Schools.</h4>
+                    <p>Journal of Independent Studies & Research: Management & Social Sciences & Economics, Vol. 17 Issue. 2.</p>
+                </div>
+            </div>
+            
+            <div class="content-section">
+                <h3>Conference Proceedings</h3>
+                <div class="content-item">
+                    <h4>Singh, S., Olugu, E.U., Musa, S.N. (2014). Proposition of key performance measures for sustainable manufacturing in SMEs</h4>
+                    <p>MSME Conclave Cum Conference on Sustainable Supply Chain Capabilities of Micro, Small and Medium Enterprises: Influences, practices, Training needs, and Employment opportunities, Doon University, Dehradun (Best Research Paper Award)</p>
+                </div>
+                <div class="content-item">
+                    <h4>Singh, S., Olugu, E.U. (2013). Sustainable supply chain performance measurement: metrics and models</h4>
+                    <p>17th International conference on Industrial Engineering Theory, Applications and Practices, Busan, Korea</p>
+                </div>
+                <div class="content-item">
+                    <h4>Singh, S. (2023). Interpretive Structural Modeling of Critical SuccessFactors for AI Procurement</h4>
+                    <p>4th International Conference on Emerging Developments in Engineering and Technology (ICEDET-2023), Shivalik College of Engineering, Dehradun, India</p>
+                </div>
+            </div>
+            
+            <div class="content-section">
+                <h3>Book Chapters</h3>
+                <div class="content-item">
+                    <h4>Singh, S., Olugu, E. U., & Musa, S. N. (2016). Development of key performance measures for sustainable manufacturing in global SMEs.</h4>
+                    <p>In Designing and implementing global supply chain management (pp. 210-218). IGI Global. (Scopus-Indexed)</p>
+                </div>
+                <div class="content-item">
+                    <h4>Singh, S., Afzalur Rehman., Vikas Garg., & Satrenjit Kaur Johl. (2025). The Looming Labyrinth: Risks of Artificial Intelligence in Financial Sector.</h4>
+                    <p>In Green Horizons: Role of AI in Sustainable Finance (Accepted). Springer Nature. (Scopus-Indexed)</p>
+                </div>
+                <div class="content-item">
+                    <h4>Afzalur Rehman., Singh, S., Mohammed Salim., & Uvesh Hussain. (2025). Legal Landscapes of Blockchain and Digital Twins: A Comparative Analysis between India and Global Perspectives.</h4>
+                    <p>In Green Horizons: Role of AI in Sustainable Finance (Accepted). Springer Nature. (Scopus-Indexed)</p>
+                </div>
+                <div class="content-item">
+                    <h4>Singh S., & Afzalur Rehman (2025). Barriers to Industry 4.0 Implementation in Indian Manufacturing SMEs Using Integrated AHP-VIKOR Framework.</h4>
+                    <p>In Sustainable Advanced Manufacturing and Logistics in ASEAN. IGI Global (Scopus Indexed)</p>
+                </div>
+            </div>
+            
+            <div class="content-section">
+                <h3>Case Studies</h3>
+                <div class="content-item">
+                    <h4>Sinha, P., Singh, S., Mittal R., & Dayal S. (2025). Burberry: Victim of Price, Perception, or Plunge?</h4>
+                    <p>IVEY Publishing</p>
+                </div>
+                <div class="content-item">
+                    <h4>Singh, S., Gupta, S., & Olugu, EZutah Udoney, (2025). Pioneering Firms in India and Their Climatic Challenges: A Case Study of ITC Limited.</h4>
+                    <p>Emerald Publishing (Accepted)</p>
+                </div>
+            </div>
+            
+            <div class="content-section">
+                <h3>Books</h3>
+                <div class="content-item">
+                    <h4>Singh, S., Gupta, S., and Jagtap, S. eds. Futuristic Technology for Sustainable Manufacturing.</h4>
+                    <p>IGI Global, 2024.</p>
+                </div>
+                <div class="content-item">
+                    <h4>Akhtar S., Singh, S., and Olugu, EU. eds. Financial Synergies in Supply Chains: innovating for Efficiency, Profitability and Sustainability.</h4>
+                    <p>Taylor and Francis, 2025. (Ongoing)</p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -853,6 +1052,16 @@
                                 <a href="https://www.researchgate.net/profile/Sujit-Singh-8" target="_blank">ResearchGate</a> | 
                                 <a href="https://www.linkedin.com/in/dr-sujit-singh-5bb71623/" target="_blank">LinkedIn</a>
                             </p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-user-friends"></i>
+                        </div>
+                        <div>
+                            <h3>References</h3>
+                            <p>Dr. Siti Nurmaya Musa, University of Malaya: nurmaya@um.edu.my</p>
+                            <p>Prof. S.G. Deshmukh, IIT Delhi: deshmukh.sg@gmail.com</p>
                         </div>
                     </div>
                 </div>
@@ -916,6 +1125,8 @@
             </div>
             <div class="copyright">
                 <p>&copy; 2025 Dr. Sujit Singh. All Rights Reserved.</p>
+                <p>Declaration: I hereby declare that all the information furnished above is true to the best of my knowledge.</p>
+                <p>Date: 08/07/2025    Place: Hyderabad    (SUJIT SINGH)</p>
             </div>
         </div>
     </footer>
@@ -1001,20 +1212,13 @@
         const observer = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    if (entry.target.classList.contains('skill-progress')) {
-                        const progressBar = entry.target.querySelector('span');
-                        const width = progressBar.getAttribute('data-width');
-                        progressBar.style.width = width;
-                    }
                     entry.target.classList.add('animated');
                 }
             });
         }, observerOptions);
         
-        document.querySelectorAll('.skill-progress').forEach(progress => {
-            const width = progress.parentElement.getAttribute('data-percent');
-            progress.querySelector('span').setAttribute('data-width', width);
-            observer.observe(progress);
+        document.querySelectorAll('.content-section, .timeline-item, .publication-item').forEach(item => {
+            observer.observe(item);
         });
     </script>
 </body>
