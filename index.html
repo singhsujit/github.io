@@ -1884,9 +1884,9 @@
         const counterObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    animateCounter(document.getElementById('exp-counter'), 0, 24, 1500);
-                    animateCounter(document.getElementById('pub-counter'), 0, 28, 1500);
-                    animateCounter(document.getElementById('student-counter'), 0, 18, 1500);
+                    animateCounter(document.getElementById('exp-counter'), 0, 25, 1500);
+                    animateCounter(document.getElementById('pub-counter'), 0, 36, 1500);
+                    animateCounter(document.getElementById('student-counter'), 0, 20, 1500);
                     animateCounter(document.getElementById('project-counter'), 0, 8, 1500);
                     counterObserver.unobserve(counterSection);
                 }
