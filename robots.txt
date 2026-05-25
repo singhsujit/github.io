@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://singhsujit.github.io/github.io/sitemap.xml
